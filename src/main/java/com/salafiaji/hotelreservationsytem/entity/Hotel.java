@@ -17,6 +17,7 @@ import java.time.LocalDateTime;
 @Builder
 @Entity
 public class Hotel {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;

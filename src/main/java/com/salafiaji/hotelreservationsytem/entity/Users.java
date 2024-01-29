@@ -1,8 +1,6 @@
 package com.salafiaji.hotelreservationsytem.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.EnumType;
-import jakarta.persistence.Enumerated;
+import jakarta.persistence.*;
 import lombok.*;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
@@ -16,6 +14,9 @@ import java.time.LocalDateTime;
 @Builder
 @Entity
 public class Users {
+
+   @Id
+   @GeneratedValue(strategy = GenerationType.IDENTITY)
    private Long id;
    private String firstName;
    private String lastName;
@@ -31,5 +32,4 @@ public class Users {
    private String modifiedBy;
    private int numberOfLodgings;
    private String email;
-
 }
